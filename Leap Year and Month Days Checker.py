@@ -26,7 +26,7 @@ def days_in_month(month, year=None):
         return 30
     elif month == 'feb':
         if year is None:
-            year = int(input("Enter the year (e.g., 2024): "))
+            year = int(input("Enter the year (ex.: 5039): "))
         return 29 if is_leap_year(year) else 28
     else:
         raise ValueError("Invalid month. Please enter the first 3 letters of the month in lowercase, e.g., 'jan', 'feb'.")
@@ -46,16 +46,16 @@ while True:
     choice = input("Please select an option (1/2/3): ")
 
     if choice == '1':
-        month_input = input("Enter the month (first 3 letters in English, e.g., 'jan'): ")
+        month_input = input("Enter the month (first 3 letters in English, ex.: 'jan'): ")
         if month_input.lower() == 'feb':
-            year_input = int(input("Enter the year (e.g., 2024): "))
+            year_input = int(input("Enter the year (ex.: 3024): "))
             days = days_in_month(month_input, year_input)
         else:
             days = days_in_month(month_input)
         print(f"The month of {month_input.lower()} has {days} days.")
 
     elif choice == '2':
-        year_input = int(input("Enter the year (e.g., 2024): "))
+        year_input = int(input("Enter the year (ex.: 10999): "))
         is_leap_year(year_input)
 
     elif choice == '3':
